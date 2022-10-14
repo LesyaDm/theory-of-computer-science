@@ -16,7 +16,7 @@ function getRes(){
 
 function getTable(){
   let text = document.forms[0].elements[0].value.toLowerCase();
-  let alph_ru = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ,.'; //e = её, ь = ьъ
+  let alph_ru = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ,.'; 
 
   for (let i = 0; i < alph_ru.length; i++){
     percent.push(0);
@@ -44,7 +44,8 @@ function getCalc(){
     shen += (percent[i] != 0) ? percent[i] * Math.log2(percent[i]) : 0;
   }
   shen *= -1;
-  res = "Ответ: " + shen;
+  let full = shen * 36; 
+  res = "Ответ: <br>Среднее кол-во информации: " + shen + "<br>Полное кол-во информации: " + full;
   document.getElementById("result3").innerHTML = res;
 }
 

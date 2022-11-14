@@ -52,7 +52,7 @@ function getCalc(){
 
 function getDop(){
   let redundancy = 0;
-  redundancy = 1 - shen / hartly;
+  redundancy = 1 - shen / Math.log2(36);
   res = "Ответ: " + redundancy;
   document.getElementById("result4").innerHTML = res;
 }
